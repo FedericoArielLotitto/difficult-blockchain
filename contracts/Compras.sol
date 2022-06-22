@@ -2,21 +2,17 @@
 pragma solidity >=0.4.22 <0.9.0;
 
 contract Compras {
-  enum Estado { ACTIVO, LECTURA, BOOTSTRAP };
+  enum Estado { ACTIVO, LECTURA, BOOTSTRAP }
   Estado estado;
   uint public compraCount = 0;
   mapping(uint => Compra) public compras;
-  
-  constructor Compras() {
-    estado;
-  }
 
-  modifier activo(Estado estado) {
-    require(estado == Estado.ACTIVO, "El contrato debe estar activo para realizar la transacción.");
+  modifier activo() {
+    require(estado == Estado.ACTIVO, "El contrato debe estar activo para realizar la transaccion.");
     _; 
   }
 
-  modifier bootstrap(Estado estado) {
+  modifier bootstrap() {
     require(estado == Estado.BOOTSTRAP, "Solo puede agregar compras."); 
     _;  
   }
