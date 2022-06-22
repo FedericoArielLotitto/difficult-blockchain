@@ -41,8 +41,8 @@ contract Compras {
     return compras[_id];
   }
 
-  //function obtenerUsuarioDeLaCompra(uint _id) public view returns (Usuario memory) { 
-    //return compras[_id].usuarioComprador;
+  //function obtenerUsuarioDeLaCompra(uint _idCompra) public view returns (Usuario memory) { 
+    //return compras[_idCompra].usuarioComprador;
   //}
 
   function agregarCompra(address _comprador, uint _precio, string[] memory _articulos) public bootstrap {
@@ -55,7 +55,7 @@ contract Compras {
     //Usuario memory usuario = obtenerUsuarioDeLaCompra(_idCompra);
     //Compra memory compra = obtenerCompra(_idCompra);
     //saldoInsuficiente(usuario.saldo, compra);
-    //usuario.saldo = usuario.saldo - compra.precio;  
+    //usuario.saldo -= compra.precio;  
   //}
 
   function saldoInsuficiente(uint saldo, Compra memory compra) private pure{
