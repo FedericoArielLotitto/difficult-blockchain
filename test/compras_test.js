@@ -69,6 +69,18 @@ contract("Compras", async (accounts) => {
     });
   });
 
+  describe("Dado un contrato con 3 compras de 12, 25 y 33 de importe.", async () => {
+    before("el promedio es 23.33.", async () => {
+      await compraContrato.agregarCompra(accounts[1], 12, ["Chalosse", "Chantelley"]);
+      await compraContrato.agregarCompra(accounts[1], 25, ["Chalosse", "Chantelley"]);
+      await compraContrato.agregarCompra(accounts[1], 33, ["Chalosse", "Chantelley"]);
+    });
+    it("retorna el promedio.", async () => {
+      const promedioEsperado = compraContrato.calcularPromedio();
+      assert.equal(promedioEsperado,23.33);
+    });
+  });
+
 });
 
 async function testRejection(callback, errorMessage) {
