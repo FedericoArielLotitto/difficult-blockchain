@@ -4,7 +4,7 @@ pragma solidity >=0.4.22 <0.9.0;
 contract Compras {
   enum Estado { ACTIVO, LECTURA, BOOTSTRAP }
   Estado estado;
-  uint public compraCount = 0;
+  uint public compraCount;
   mapping(uint => Compra) public compras;
 
   modifier activo() {
@@ -34,7 +34,7 @@ contract Compras {
   }
 
   function agregarCompra(address _comprador, uint _precio, string[] memory _articulos) public {
-    compraCount++;
+    compraCount += 1;
     compras[compraCount] = Compra(compraCount, _comprador, _precio, _articulos);
   }
 }
