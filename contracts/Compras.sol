@@ -34,7 +34,23 @@ contract Compras {
   }
 
   function agregarCompra(address _comprador, uint _precio, string[] memory _articulos) public {
-    compraCount += 1;
+    incrementarCompras();
     compras[compraCount] = Compra(compraCount, _comprador, _precio, _articulos);
+  }
+
+  function activar() public {
+    estado = Estado.ACTIVO;
+  }
+
+  function habilitarAgregarCompras() public {
+    estado = Estado.BOOTSTRAP;
+  }
+
+  function habilitarConsultaCompras() public {
+    estado = Estado.LECTURA;
+  }
+
+  function incrementarCompras() internal {
+     compraCount += 1;
   }
 }
