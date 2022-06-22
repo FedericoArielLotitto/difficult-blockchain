@@ -33,7 +33,7 @@ contract Compras {
     return compras[_id];
   }
 
-  function agregarCompra(address _comprador, uint _precio, string[] memory _articulos) public {
+  function agregarCompra(address _comprador, uint _precio, string[] memory _articulos) public activo {
     incrementarCompras();
     compras[compraCount] = Compra(compraCount, _comprador, _precio, _articulos);
   }
