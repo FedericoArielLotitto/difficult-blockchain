@@ -14,6 +14,7 @@ contract("Compras", async (accounts) => {
     });
 
     it("puede obtener la compra.", async () => {
+      await compraContrato.habilitarConsultaCompras();
       const compraEsperada = await compraContrato.obtenerCompra(1);
       assert.equal(compraEsperada._id, 1, "Debería ser la primera");
     });
@@ -40,15 +41,33 @@ contract("Compras", async (accounts) => {
     });
   });
 
-  // describe("Dado un contrato en estado lectura, permite obtener una compra por su id.", async () => {
-  //   before("Activa el estado ", async () => {
-  //     await compraContrato.habilitarConsultaCompras();
-  //   });
-  //   it("y puede obtener la compra.", async () => {
-  //     const compraEsperada = await compraContrato.obtenerCompra(1);
-  //     assert.equal(compraEsperada._id, 1, "Debería ser la primera");
-  //   });
-  // });
+  describe("Dado un contrato en estado lectura, permite obtener una compra por su id.", async () => {
+    before("Activa el estado ", async () => {
+      await compraContrato.habilitarConsultaCompras();
+    });
+    it("y puede obtener la compra.", async () => {
+      const compraEsperada = await compraContrato.obtenerCompra(1);
+      assert.equal(compraEsperada._id, 1, "Debería ser la primera");
+    });
+  });
+
+  describe("Dado un contrato en estado bootstrap, no permite consultar compras por su id.", async () => {
+    before("Bootstrapea el estado.", async () => {
+      await compraContrato.habilitarAgregarCompras();
+    });
+    it("y lanza error.", async () => {
+      testRejection(async () => { await compraContrato.obtenerCompra(1) }, 'Solo puede consultar compras.');
+    });
+  });
+
+  describe("Dado un contrato en estado lectura, no permite agregar compras.", async () => {
+    before("Cambia el estado a lectura.", async () => {
+      await compraContrato.habilitarConsultaCompras();
+    });
+    it("y lanza error.", async () => {
+      testRejection(async () => { await compraContrato.agregarCompra(accounts[1], 10, ["Chalosse", "Chantelley"]) }, 'Solo puede agregar compras.');
+    });
+  });
 
 });
 
@@ -57,6 +76,7 @@ async function testRejection(callback, errorMessage) {
       await callback()
       assert.fail('Should have failed')
   } catch (e) {
+      console.log(e);
       assert.equal(e.reason, errorMessage)
   }
 }
