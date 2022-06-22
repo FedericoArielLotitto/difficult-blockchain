@@ -1,0 +1,18 @@
+version: '3'
+
+services:
+  geth:
+    container_name: geth
+    image: ethereum/client-go
+    ports: 
+      - 3100:3100
+  
+  # ganachecli: simulated test rpc on dev environment
+  ganache-cli:
+    container_name: ganache-cli
+    image: trufflesuite/ganache-cli
+    ports:
+      - 8545:8545
+
+  
+  

@@ -1,0 +1,387 @@
+{
+    "contractName": "Usuarios",
+    "abi": [
+        {
+            "inputs": [
+                {
+                    "internalType": "uint256",
+                    "name": "_saldo",
+                    "type": "uint256"
+                }
+            ],
+            "name": "agregarSaldo",
+            "outputs": [],
+            "stateMutability": "nonpayable",
+            "type": "function"
+        },
+        {
+            "inputs": [],
+            "name": "usuario",
+            "outputs": [
+                {
+                    "internalType": "address",
+                    "name": "",
+                    "type": "address"
+                }
+            ],
+            "stateMutability": "view",
+            "type": "function"
+        }
+    ],
+    "metadata": "{\"compiler\":{\"version\":\"0.8.15+commit.e14f2714\"},\"language\":\"Solidity\",\"output\":{\"abi\":[{\"inputs\":[{\"internalType\":\"uint256\",\"name\":\"_saldo\",\"type\":\"uint256\"}],\"name\":\"agregarSaldo\",\"outputs\":[],\"stateMutability\":\"nonpayable\",\"type\":\"function\"},{\"inputs\":[],\"name\":\"usuario\",\"outputs\":[{\"internalType\":\"address\",\"name\":\"\",\"type\":\"address\"}],\"stateMutability\":\"view\",\"type\":\"function\"}],\"devdoc\":{\"kind\":\"dev\",\"methods\":{},\"version\":1},\"userdoc\":{\"kind\":\"user\",\"methods\":{},\"version\":1}},\"settings\":{\"compilationTarget\":{\"c:/Users/Stephanie Pazos/Desktop/Bolckchain/difficult-blockchain/contracts/Usuarios.sol\":\"Usuarios\"},\"evmVersion\":\"london\",\"libraries\":{},\"metadata\":{\"bytecodeHash\":\"ipfs\"},\"optimizer\":{\"enabled\":true,\"runs\":200},\"remappings\":[]},\"sources\":{\"c:/Users/Stephanie Pazos/Desktop/Bolckchain/difficult-blockchain/contracts/Usuarios.sol\":{\"keccak256\":\"0xa3d356d2332083f83d0c6d34c1a3d28e6a1384999eb64eaaade9650bce220869\",\"urls\":[\"bzz-raw://2835c4ea0c1dc3e5e5b489040c568787b2de809916c0dc62fcab817d3c641511\",\"dweb:/ipfs/QmWjbb8Jp48wVWRmfwhptp2ryCfrdxNy9tCTY6miuYSfAH\"]}},\"version\":1}",
+    "bytecode": "6080604052600060015534801561001557600080fd5b50610158806100256000396000f3fe608060405234801561001057600080fd5b50600436106100365760003560e01c80634768e0121461003b5780639eddbd271461006a575b600080fd5b60005461004e906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61007d6100783660046100e3565b61007f565b005b600081116100c95760405162461bcd60e51b815260206004820152601360248201527222b73a3932b3b0903630903a30b930b9b1b09760691b604482015260640160405180910390fd5b80600160008282546100db91906100fc565b909155505050565b6000602082840312156100f557600080fd5b5035919050565b6000821982111561011d57634e487b7160e01b600052601160045260246000fd5b50019056fea2646970667358221220c63d54ec766b381c6c1f7a69e281fa018afb6975806c0828c8bebe8e171c4b5464736f6c634300080f0033",
+    "deployedBytecode": "608060405234801561001057600080fd5b50600436106100365760003560e01c80634768e0121461003b5780639eddbd271461006a575b600080fd5b60005461004e906001600160a01b031681565b6040516001600160a01b03909116815260200160405180910390f35b61007d6100783660046100e3565b61007f565b005b600081116100c95760405162461bcd60e51b815260206004820152601360248201527222b73a3932b3b0903630903a30b930b9b1b09760691b604482015260640160405180910390fd5b80600160008282546100db91906100fc565b909155505050565b6000602082840312156100f557600080fd5b5035919050565b6000821982111561011d57634e487b7160e01b600052601160045260246000fd5b50019056fea2646970667358221220c63d54ec766b381c6c1f7a69e281fa018afb6975806c0828c8bebe8e171c4b5464736f6c634300080f0033",
+    "sourceMap": "28:218:2:-:0;;;104:1;82:23;;28:218;;;;;;;;;;;;;;;;",
+    "deployedSourceMap": "28:218:2:-:0;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;53:22;;;;;-1:-1:-1;;;;;53:22:2;;;;;;-1:-1:-1;;;;;178:32:3;;;160:51;;148:2;133:18;53:22:2;;;;;;;114:129;;;;;;:::i;:::-;;:::i;:::-;;;184:1;175:6;:10;167:42;;;;-1:-1:-1;;;167:42:2;;609:2:3;167:42:2;;;591:21:3;648:2;628:18;;;621:30;-1:-1:-1;;;667:18:3;;;660:49;726:18;;167:42:2;;;;;;;;229:6;220:5;;:15;;;;;;;:::i;:::-;;;;-1:-1:-1;;;114:129:2:o;222:180:3:-;281:6;334:2;322:9;313:7;309:23;305:32;302:52;;;350:1;347;340:12;302:52;-1:-1:-1;373:23:3;;222:180;-1:-1:-1;222:180:3:o;755:225::-;795:3;826:1;822:6;819:1;816:13;813:136;;;871:10;866:3;862:20;859:1;852:31;906:4;903:1;896:15;934:4;931:1;924:15;813:136;-1:-1:-1;965:9:3;;755:225::o",
+    "sourcePath": "c:/Users/Stephanie Pazos/Desktop/Bolckchain/difficult-blockchain/contracts/Usuarios.sol",
+    "compiler": {
+        "name": "solc",
+        "version": "0.8.15+commit.e14f2714"
+    },
+    "ast": {
+        "absolutePath": "c:/Users/Stephanie Pazos/Desktop/Bolckchain/difficult-blockchain/contracts/Usuarios.sol",
+        "exportedSymbols": {
+            "Usuarios": [
+                195
+            ]
+        },
+        "id": 196,
+        "nodeType": "SourceUnit",
+        "nodes": [
+            {
+                "id": 172,
+                "literals": [
+                    "solidity",
+                    "^",
+                    "0.8",
+                    ".10"
+                ],
+                "nodeType": "PragmaDirective",
+                "src": "0:24:2"
+            },
+            {
+                "abstract": false,
+                "baseContracts": [],
+                "canonicalName": "Usuarios",
+                "contractDependencies": [],
+                "contractKind": "contract",
+                "fullyImplemented": true,
+                "id": 195,
+                "linearizedBaseContracts": [
+                    195
+                ],
+                "name": "Usuarios",
+                "nameLocation": "37:8:2",
+                "nodeType": "ContractDefinition",
+                "nodes": [
+                    {
+                        "constant": false,
+                        "functionSelector": "4768e012",
+                        "id": 174,
+                        "mutability": "mutable",
+                        "name": "usuario",
+                        "nameLocation": "68:7:2",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 195,
+                        "src": "53:22:2",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_address",
+                            "typeString": "address"
+                        },
+                        "typeName": {
+                            "id": 173,
+                            "name": "address",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "53:7:2",
+                            "stateMutability": "nonpayable",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_address",
+                                "typeString": "address"
+                            }
+                        },
+                        "visibility": "public"
+                    },
+                    {
+                        "constant": false,
+                        "id": 177,
+                        "mutability": "mutable",
+                        "name": "saldo",
+                        "nameLocation": "96:5:2",
+                        "nodeType": "VariableDeclaration",
+                        "scope": 195,
+                        "src": "82:23:2",
+                        "stateVariable": true,
+                        "storageLocation": "default",
+                        "typeDescriptions": {
+                            "typeIdentifier": "t_uint256",
+                            "typeString": "uint256"
+                        },
+                        "typeName": {
+                            "id": 175,
+                            "name": "uint",
+                            "nodeType": "ElementaryTypeName",
+                            "src": "82:4:2",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_uint256",
+                                "typeString": "uint256"
+                            }
+                        },
+                        "value": {
+                            "hexValue": "30",
+                            "id": 176,
+                            "isConstant": false,
+                            "isLValue": false,
+                            "isPure": true,
+                            "kind": "number",
+                            "lValueRequested": false,
+                            "nodeType": "Literal",
+                            "src": "104:1:2",
+                            "typeDescriptions": {
+                                "typeIdentifier": "t_rational_0_by_1",
+                                "typeString": "int_const 0"
+                            },
+                            "value": "0"
+                        },
+                        "visibility": "internal"
+                    },
+                    {
+                        "body": {
+                            "id": 193,
+                            "nodeType": "Block",
+                            "src": "156:87:2",
+                            "statements": [
+                                {
+                                    "expression": {
+                                        "arguments": [
+                                            {
+                                                "commonType": {
+                                                    "typeIdentifier": "t_uint256",
+                                                    "typeString": "uint256"
+                                                },
+                                                "id": 185,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": false,
+                                                "lValueRequested": false,
+                                                "leftExpression": {
+                                                    "id": 183,
+                                                    "name": "_saldo",
+                                                    "nodeType": "Identifier",
+                                                    "overloadedDeclarations": [],
+                                                    "referencedDeclaration": 179,
+                                                    "src": "175:6:2",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_uint256",
+                                                        "typeString": "uint256"
+                                                    }
+                                                },
+                                                "nodeType": "BinaryOperation",
+                                                "operator": ">",
+                                                "rightExpression": {
+                                                    "hexValue": "30",
+                                                    "id": 184,
+                                                    "isConstant": false,
+                                                    "isLValue": false,
+                                                    "isPure": true,
+                                                    "kind": "number",
+                                                    "lValueRequested": false,
+                                                    "nodeType": "Literal",
+                                                    "src": "184:1:2",
+                                                    "typeDescriptions": {
+                                                        "typeIdentifier": "t_rational_0_by_1",
+                                                        "typeString": "int_const 0"
+                                                    },
+                                                    "value": "0"
+                                                },
+                                                "src": "175:10:2",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                }
+                                            },
+                                            {
+                                                "hexValue": "456e7472656761206c6120746172617363612e",
+                                                "id": 186,
+                                                "isConstant": false,
+                                                "isLValue": false,
+                                                "isPure": true,
+                                                "kind": "string",
+                                                "lValueRequested": false,
+                                                "nodeType": "Literal",
+                                                "src": "187:21:2",
+                                                "typeDescriptions": {
+                                                    "typeIdentifier": "t_stringliteral_95fdc1a2ed52eaaf103e8b0586d852e5ac209373c2edcf4ddad04530307b6e61",
+                                                    "typeString": "literal_string \"Entrega la tarasca.\""
+                                                },
+                                                "value": "Entrega la tarasca."
+                                            }
+                                        ],
+                                        "expression": {
+                                            "argumentTypes": [
+                                                {
+                                                    "typeIdentifier": "t_bool",
+                                                    "typeString": "bool"
+                                                },
+                                                {
+                                                    "typeIdentifier": "t_stringliteral_95fdc1a2ed52eaaf103e8b0586d852e5ac209373c2edcf4ddad04530307b6e61",
+                                                    "typeString": "literal_string \"Entrega la tarasca.\""
+                                                }
+                                            ],
+                                            "id": 182,
+                                            "name": "require",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [
+                                                4294967278,
+                                                4294967278
+                                            ],
+                                            "referencedDeclaration": 4294967278,
+                                            "src": "167:7:2",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_function_require_pure$_t_bool_$_t_string_memory_ptr_$returns$__$",
+                                                "typeString": "function (bool,string memory) pure"
+                                            }
+                                        },
+                                        "id": 187,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "kind": "functionCall",
+                                        "lValueRequested": false,
+                                        "names": [],
+                                        "nodeType": "FunctionCall",
+                                        "src": "167:42:2",
+                                        "tryCall": false,
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_tuple$__$",
+                                            "typeString": "tuple()"
+                                        }
+                                    },
+                                    "id": 188,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "167:42:2"
+                                },
+                                {
+                                    "expression": {
+                                        "id": 191,
+                                        "isConstant": false,
+                                        "isLValue": false,
+                                        "isPure": false,
+                                        "lValueRequested": false,
+                                        "leftHandSide": {
+                                            "id": 189,
+                                            "name": "saldo",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 177,
+                                            "src": "220:5:2",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "nodeType": "Assignment",
+                                        "operator": "+=",
+                                        "rightHandSide": {
+                                            "id": 190,
+                                            "name": "_saldo",
+                                            "nodeType": "Identifier",
+                                            "overloadedDeclarations": [],
+                                            "referencedDeclaration": 179,
+                                            "src": "229:6:2",
+                                            "typeDescriptions": {
+                                                "typeIdentifier": "t_uint256",
+                                                "typeString": "uint256"
+                                            }
+                                        },
+                                        "src": "220:15:2",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "id": 192,
+                                    "nodeType": "ExpressionStatement",
+                                    "src": "220:15:2"
+                                }
+                            ]
+                        },
+                        "functionSelector": "9eddbd27",
+                        "id": 194,
+                        "implemented": true,
+                        "kind": "function",
+                        "modifiers": [],
+                        "name": "agregarSaldo",
+                        "nameLocation": "123:12:2",
+                        "nodeType": "FunctionDefinition",
+                        "parameters": {
+                            "id": 180,
+                            "nodeType": "ParameterList",
+                            "parameters": [
+                                {
+                                    "constant": false,
+                                    "id": 179,
+                                    "mutability": "mutable",
+                                    "name": "_saldo",
+                                    "nameLocation": "141:6:2",
+                                    "nodeType": "VariableDeclaration",
+                                    "scope": 194,
+                                    "src": "136:11:2",
+                                    "stateVariable": false,
+                                    "storageLocation": "default",
+                                    "typeDescriptions": {
+                                        "typeIdentifier": "t_uint256",
+                                        "typeString": "uint256"
+                                    },
+                                    "typeName": {
+                                        "id": 178,
+                                        "name": "uint",
+                                        "nodeType": "ElementaryTypeName",
+                                        "src": "136:4:2",
+                                        "typeDescriptions": {
+                                            "typeIdentifier": "t_uint256",
+                                            "typeString": "uint256"
+                                        }
+                                    },
+                                    "visibility": "internal"
+                                }
+                            ],
+                            "src": "135:13:2"
+                        },
+                        "returnParameters": {
+                            "id": 181,
+                            "nodeType": "ParameterList",
+                            "parameters": [],
+                            "src": "156:0:2"
+                        },
+                        "scope": 195,
+                        "src": "114:129:2",
+                        "stateMutability": "nonpayable",
+                        "virtual": false,
+                        "visibility": "public"
+                    }
+                ],
+                "scope": 196,
+                "src": "28:218:2",
+                "usedErrors": []
+            }
+        ],
+        "src": "0:246:2"
+    },
+    "functionHashes": {
+        "agregarSaldo(uint256)": "9eddbd27",
+        "usuario()": "4768e012"
+    },
+    "gasEstimates": {
+        "creation": {
+            "codeDepositCost": "68800",
+            "executionCost": "5123",
+            "totalCost": "73923"
+        },
+        "external": {
+            "agregarSaldo(uint256)": "24541",
+            "usuario()": "2303"
+        }
+    }
+}
