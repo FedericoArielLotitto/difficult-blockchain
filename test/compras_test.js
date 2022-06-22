@@ -1,13 +1,20 @@
-const ComprasTest = artifacts.require("ComprasTest");
+const Compras = artifacts.require("Compras");
 
-/*
- * uncomment accounts to access the test accounts made available by the
- * Ethereum client
- * See docs: https://www.trufflesuite.com/docs/truffle/testing/writing-tests-in-javascript
- */
-contract("ComprasTest", function (/* accounts */) {
-  it("should assert true", async function () {
-    await ComprasTest.deployed();
-    return assert.isTrue(true);
+contract("Compras", function (accounts) {
+  let compraContrato;
+  let compraEsperada;
+
+  before(async () => {
+    compraContrato = await Compras.deployed();
   });
+
+  describe("Dado un id de compra, ", async () => {
+    it("se debe obtener una compra en ese id.", async () => { 
+        await compraContrato.obtenerCompra(0);
+        compraEsperada = accounts[0];
+        assert.equal(compraEsperada._id, 0);
+    });
+
+  });
+
 });
