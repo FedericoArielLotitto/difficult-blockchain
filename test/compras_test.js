@@ -83,6 +83,15 @@ contract("Compras", async (accounts) => {
     });
   });
 
+  describe("Dado un usuario sin saldo, puede agregar el propio usuario.", async () => {
+    it("Agrega saldo.", async () => {
+      await compraContrato.agregarUsuario(accounts[2], 0);
+      await compraContrato.agregarSaldo(100, accounts[2]);
+      const usuario = await compraContrato.obtenerUsuario(accounts[2])
+      assert.equal(usuario.saldo, 100);
+    });
+  });
+
 });
 
 async function testRejection(callback, errorMessage) {

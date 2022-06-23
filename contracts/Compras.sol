@@ -66,6 +66,14 @@ contract Compras {
         return compras[_idCompra].usuarioComprador;
     }
 
+    function agregarUsuario(address _idUsuario, uint _saldoInicial) public {
+      usuarios[_idUsuario] = Usuario(_idUsuario, _saldoInicial);
+    }
+
+    function obtenerUsuario(address _idUsuario) public view returns(Usuario memory) {
+      return usuarios[_idUsuario];
+    }
+
     function agregarCompra(
         Usuario memory _comprador,
         uint256 _precio,
@@ -81,9 +89,9 @@ contract Compras {
         restarSaldo(compraCount);
     }
 
-    function agregarSaldo(uint256 _saldo) public duenio {
+    function agregarSaldo(uint256 _saldo, address _idUsuario) public duenio {
         require(_saldo > 0, "Entrega la tarasca.");
-        usuarios[msg.sender].saldo += _saldo;
+        usuarios[_idUsuario].saldo += _saldo;
     }
 
     function restarSaldo(uint256 _idCompra) private view {
